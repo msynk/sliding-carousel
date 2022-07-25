@@ -6,6 +6,8 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  user-select: none;
+  cursor: grab;
 }
 
 .crsl .item {
