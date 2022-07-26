@@ -8,36 +8,17 @@
   width: 100%;
   user-select: none;
   cursor: grab;
+  display: flex;
 }
 
 .crsl .item {
-  display: none;
-  width: 100%;
   border: 1px solid red;
   text-align: center;
+  flex-grow: 1;
+  width: 100%;
 }
 
-.crsl .item.transition {
-  transition: all 0.5s;
-}
-
-.crsl .item.active {
-  display: block;
-}
-
-.crsl .item.left {
-  transform: translateX(-100%);
-}
-
-.crsl .item.right {
-  transform: translateX(100%);
-}
-
-.crsl .item.center {
-  transform: translateX(0);
-}
-
-.crsl .item.entering {
+.crsl .item.absolute {
   position: absolute;
   top: 0;
 }
