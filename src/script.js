@@ -4,8 +4,8 @@ const carousel = document.querySelector('.crsl');
 const items = [].slice.call(carousel.children);
 const itemsCount = items.length;
 
-const showCount = 4;
-const scrollCount = 2;
+const showCount = 5;
+const scrollCount = 1;
 
 const transitionTime = 0.5;
 
@@ -45,9 +45,10 @@ function next(delayed) {
 
 function go(delayed, isNext) {
   isInTransition = true;
+  const diff = showCount - scrollCount
   const newIndices = isNext
-    ? [...currentIndices.slice(scrollCount - currentIndices.length), ...otherIndices]
-    : [...otherIndices, ...currentIndices.slice(0, currentIndices.length - scrollCount)];
+    ? [...(diff === 0 ? [] : currentIndices.slice(-diff)), ...otherIndices]
+    : [...otherIndices, ...currentIndices.slice(0, diff)];
 
   const currents = currentIndices.map(i => items[i]);
   const others = otherIndices.map(i => items[i]);
