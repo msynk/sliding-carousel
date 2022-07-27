@@ -6,19 +6,20 @@
   position: relative;
   overflow: hidden;
   width: 100%;
+  height: 100px;
   user-select: none;
   cursor: grab;
   display: flex;
 }
 
-.crsl .item {
-  border: 1px solid red;
-  text-align: center;
-  flex-grow: 1;
-  width: 100%;
+.crsl > * {
+  display: none;
 }
 
-.crsl .item.absolute {
+.crsl .item {
+  display: block;
+  border: 1px solid red;
+  text-align: center;
   position: absolute;
   top: 0;
 }
